@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 1、将下面的字符串str的敏感字符*用空字符串””替换; (要正确表示*得转义成:\*) 
+				var str = "H e  l  ** l    o    Wo r         L d  !";
+			 * */
+			var str =  "H e  l  ** l    o    Wo r         L d  !";
+			var str1 = str.replace(/\*/g,"");
+			var str2 = str1.replace(/ /g,"");
+			
+			//3、去掉字符串123@zh@qq.com中的@;
+			var str3 = "123@zh@qq.com";
+			var str4 = str3.replace(/@/g,"");
+			
+			console.log(str4);
+			
+			//4、已知字符串str = “I hate BeiJing!”,提取第3个字符到第5个字符
+			var str5 = "I hate BeiJing!";
+			console.log(str5.substring(3,6));
+			
+			
+			//5、将字符串str = “When I was young, I love a girl in neighbor class.”中,从young提取到girl。但是不许数
+			var str6 = "When I was young, I love a girl in neighbor class.";
+			var n = str6.indexOf("young");
+			var str7 = "girl";
+			var n1 = str6.indexOf(str7);
+			console.log(str6.substring(n,n1+str7.length));
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
